@@ -11,19 +11,44 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
+
         td, th {
             border: 1px solid black;
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: #242222;
             color: white;
         }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #242222;
+        }
+
+        tbody >tr:nth-child(odd) { /* 2n-1*/
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(even) { /* 2n */
+           background-color: #8d8989;
+        }
+
         td.num {
             text-align: right;
         }
+
         td.porcentagem {
             text-align: center;
         }
@@ -35,6 +60,7 @@
     <!--
         ANATOMIA PARA TABELAS GRANDES
         TABLE
+          CAPTION
           THEAD
               TR, TD, TH
           TBOOY
@@ -43,11 +69,12 @@
               TR, TD, TH
     -->
     <Table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
         <tr>
-            <th>Estado</th>
-            <th>População</th>
-            <th>% da pop.total</th>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 100px;">População</th>
+            <th scope="col" style="width: 100px;">% da pop.total</th>
         </tr>
         </thead>
         <tbody>
@@ -189,11 +216,22 @@
         </tbody>
         <tfoot>
         <tr>
-            <th>Total de Habitantes</th>
+            <th scope="row">Total de Habitantes</th>
             <td class="num"><strong>203.078.389</strong></td>
             <td>0000</td>
         </tr>
         </tfoot>
     </Table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit laudantium veritatis laboriosam sunt quisquam ducimus porro nulla ea labore, assumenda debitis voluptatibus iure id ex culpa provident dolores magni. Sed? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa laborum tenetur temporibus, saepe incidunt cumque ab modi iste recusandae nostrum dignissimos hic doloremque accusantium facere consequuntur non commodi ipsum atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, possimus quo. Nesciunt porro molestiae, placeat quasi asperiores eos itaque qui atque repellendus alias quod. Facere voluptate assumenda quod neque magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloribus eum, ex nobis quos odio ab incidunt quis officia veniam ratione quas! Magni, alias cumque nihil soluta non ut voluptas?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit laudantium veritatis laboriosam sunt quisquam ducimus porro nulla ea labore, assumenda debitis voluptatibus iure id ex culpa provident dolores magni. Sed? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa laborum tenetur temporibus, saepe incidunt cumque ab modi iste recusandae nostrum dignissimos hic doloremque accusantium facere consequuntur non commodi ipsum atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, possimus quo. Nesciunt porro molestiae, placeat quasi asperiores eos itaque qui atque repellendus alias quod. Facere voluptate assumenda quod neque magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloribus eum, ex nobis quos odio ab incidunt quis officia veniam ratione quas! Magni, alias cumque nihil soluta non ut voluptas?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit laudantium veritatis laboriosam sunt quisquam ducimus porro nulla ea labore, assumenda debitis voluptatibus iure id ex culpa provident dolores magni. Sed? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa laborum tenetur temporibus, saepe incidunt cumque ab modi iste recusandae nostrum dignissimos hic doloremque accusantium facere consequuntur non commodi ipsum atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, possimus quo. Nesciunt porro molestiae, placeat quasi asperiores eos itaque qui atque repellendus alias quod. Facere voluptate assumenda quod neque magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloribus eum, ex nobis quos odio ab incidunt quis officia veniam ratione quas! Magni, alias cumque nihil soluta non ut voluptas?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit laudantium veritatis laboriosam sunt quisquam ducimus porro nulla ea labore, assumenda debitis voluptatibus iure id ex culpa provident dolores magni. Sed? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa laborum tenetur temporibus, saepe incidunt cumque ab modi iste recusandae nostrum dignissimos hic doloremque accusantium facere consequuntur non commodi ipsum atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, possimus quo. Nesciunt porro molestiae, placeat quasi asperiores eos itaque qui atque repellendus alias quod. Facere voluptate assumenda quod neque magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloribus eum, ex nobis quos odio ab incidunt quis officia veniam ratione quas! Magni, alias cumque nihil soluta non ut voluptas?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit laudantium veritatis laboriosam sunt quisquam ducimus porro nulla ea labore, assumenda debitis voluptatibus iure id ex culpa provident dolores magni. Sed? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa laborum tenetur temporibus, saepe incidunt cumque ab modi iste recusandae nostrum dignissimos hic doloremque accusantium facere consequuntur non commodi ipsum atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, possimus quo. Nesciunt porro molestiae, placeat quasi asperiores eos itaque qui atque repellendus alias quod. Facere voluptate assumenda quod neque magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloribus eum, ex nobis quos odio ab incidunt quis officia veniam ratione quas! Magni, alias cumque nihil soluta non ut voluptas?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit laudantium veritatis laboriosam sunt quisquam ducimus porro nulla ea labore, assumenda debitis voluptatibus iure id ex culpa provident dolores magni. Sed? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa laborum tenetur temporibus, saepe incidunt cumque ab modi iste recusandae nostrum dignissimos hic doloremque accusantium facere consequuntur non commodi ipsum atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, possimus quo. Nesciunt porro molestiae, placeat quasi asperiores eos itaque qui atque repellendus alias quod. Facere voluptate assumenda quod neque magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloribus eum, ex nobis quos odio ab incidunt quis officia veniam ratione quas! Magni, alias cumque nihil soluta non ut voluptas?</p>
 </body>
 </html>
